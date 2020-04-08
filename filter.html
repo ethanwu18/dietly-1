@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dietly Filtering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <h1><b>Dietly</b></h1>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="filter.html">
+                    Filters
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light">
+                            Sign Up
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-info is-medium is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1">
+                    Find your restaurant
+                </h1>
+                <h2 class="subtitle is-3">
+                    Select your preferences and go get some food!
+                </h2>
+            </div>
+        </div>
+    </section>
+    <br>
+    <nav class="level container">
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Restaurants featured</p>
+                <p class="title">43+</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Active student users</p>
+                <p class="title">23,042+</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Subscribers</p>
+                <p class="title">303</p>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="columns">
+            <div id="filters" class="column">
+                <div class="field">
+                    <label for="veganSelect" class="label">Vegan</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="veganSelect">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+
+                    <label for="vegetarianSelect" class="label">Vegetarian:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="vegetarianSelect">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="glutenSelect" class="label">Gluten-free:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="glutenSelect">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button onclick=findRestaurants() class="button is-light">Show me restaurants!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column panel">
+                <div id="heading" class="subtitle"></div>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
