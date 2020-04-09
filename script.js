@@ -191,12 +191,18 @@ const findRestaurants = () => {
   let acceptedRestaurants = [];
 
   for (let i = 0; i < data.length; i++) {
-    if (
-      data[i].Vegan === veganUser &&
-      data[i].Vegetarian === vegUser &&
-      data[i].GlutenFree == glutenUser
-    ) {
-      acceptedRestaurants.push(data[i]);
+    if (veganUser === "Yes") {
+      if (data[i].Vegan === veganUser && data[i].GlutenFree === glutenUser) {
+        acceptedRestaurants.push(data[i]);
+      }
+    } else {
+      if (
+        data[i].Vegan === veganUser &&
+        data[i].Vegetarian === vegUser &&
+        data[i].GlutenFree === glutenUser
+      ) {
+        acceptedRestaurants.push(data[i]);
+      }
     }
   }
   console.log(acceptedRestaurants);
